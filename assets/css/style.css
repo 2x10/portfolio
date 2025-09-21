@@ -10,7 +10,7 @@
 .main-div 
 {
     z-index: 1;
-    position:relative;
+    position: relative;
     box-shadow: rgba(255, 255, 255, 0.247) 0px 7px 29px 0px;
     border: 1px solid white;
     border-top-style: none;
@@ -20,44 +20,54 @@
     padding:30px;
 
     background-color:#111111;
-    width:70%;
+    width:75%;
     height:15000px;
+}
+
+.main-div-content
+{
+    margin: auto;
+    width:80%;
 }
 
 .top-div
 {
     z-index: 2;
-    position:relative;
+    position: relative;
 
     border: 1px solid #000000;
     border-top-style: none;
     border-left-style: none;
     border-right-style: none;
 
-    height:41px;
+    height:50px;
 
-    background-color: #1a1a1a;
+    background-color: #111111;
 }
 
 .top-div-item
 {
-    position:relative;
+    position: relative;
     z-index: 3;
 
     height:100%;
-    width: 150px;
+    width: 190px;
 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     border: 2px solid #ffffff56;
     border-top-style: none;
     border-bottom-style: none;
+
+    background-color: #111;
+}
+
+.top-div-item:hover
+{
+    background-color:#ffffff15
 }
 
 .top-div-main
 {
-    position:relative;
+    position: relative;
     width:70%;
     height: 100%;
     

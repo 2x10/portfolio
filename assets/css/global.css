@@ -8,6 +8,12 @@ body {
   color: white;
 }
 
+button {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+  color: white;
+  background-color: black;
+}
+
 p {
   font-size: 18x;
 }
