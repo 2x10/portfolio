@@ -1,0 +1,26 @@
+body {
+  overflow-x: hidden;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+
+  color: white;
+}
+
+p {
+  font-size: 18x;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #000000; 
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(72, 8, 88); 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(102, 38, 118); 
+}
