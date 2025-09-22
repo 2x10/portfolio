@@ -8,6 +8,29 @@ body {
   color: white;
 }
 
+h1 {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.863);
+  letter-spacing: -1px;
+  font-size: 53px;
+  text-shadow:0 0 20px rgba(255, 255, 255, 0.425);    
+  color: #fff;
+}
+
+h2 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.863);
+  font-size: 23px;
+  color: #fff;
+  letter-spacing: -1.2px;
+}
+
+a {
+  color:rgb(109, 155, 220);
+  font-weight:bold;
+  text-decoration: none;
+}
+
 button {
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
   color: white;
@@ -18,15 +41,6 @@ p {
   font-size: 18x;
 }
 
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: #000000; 
-}
-::-webkit-scrollbar-thumb {
-  background: rgb(72, 8, 88); 
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(102, 38, 118); 
+br {
+  margin: 10px;
 }
