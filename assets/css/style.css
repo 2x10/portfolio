@@ -11,7 +11,6 @@
     padding:30px;
 
     background-color:#111111;
-    width:75%;
 }
 
 .main-div-content
@@ -20,36 +19,47 @@
     width:80%;
 }
 
-.top-div
-{
-    position:fixed;
+.top-div {
+    position: fixed;
     z-index: 9999;
 
+    display: flex;
     border: 1px solid #000000;
     border-top-style: none;
     border-left-style: none;
     border-right-style: none;
 
-    height:55px;
-    width:100%;
-    margin:auto;
+    gap: 10px;
+    height: 55px;
+    width: 100%;
+    margin: auto;
+
+    white-space: nowrap;
 
     background-color: #111111;
+
+    display: flex;            
+    overflow-x: auto;        
+    overflow-y: hidden;     
+    white-space: nowrap;      
+    scrollbar-width: thin;    
 }
 
-.top-div-item
-{
-    position: relative;
-    z-index: 3;
+.top-div::-webkit-scrollbar {
+    display: none;
+}
 
-    height:100%;
-    width: 190px;
-
+.top-div-item {
+    flex: 0 0 auto;    
+    height: 100%;
+    width: 200px;
+    min-width: 100px; 
+    background-color: #111;
     border: 2px solid #ffffff56;
     border-top-style: none;
     border-bottom-style: none;
-
-    background-color: #111;
+    color: white;
+    cursor: pointer;
 }
 
 .top-div-clock
@@ -212,7 +222,7 @@
 
 .project-button-wrapper button 
 {
-    margin: 5px;
+    margin: 15px 5px;
     padding: 10px 10px;
     background-color:#3c1e98;
     border: 0px;
@@ -235,5 +245,37 @@
 .contact 
 {
     position:relative;
-    width:80%;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 15px;         
+}
+
+.contact button
+{
+    border-radius:20px;
+    border: 0px;
+    height:70px;
+    background-color: #00000000;
+}
+
+.line
+{
+    height:50px;
+    background-color: #474747;
+    width:1px;
+}
+
+.contact button:hover
+{
+    background-color: #FFFFFF15;
+    color: #3c1e98;
+}
+
+
+.contact img
+{
+    height: 30px;
+    width: 30px;
 }
