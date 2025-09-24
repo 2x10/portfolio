@@ -18,7 +18,7 @@ WORKDIR /app
 COPY --from=build /app/.output /app/.output
 
 # Copy your nginx config (template with env vars if you want flexibility)
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx/default.conf.template /etc/nginx/conf.d/default.conf
 
 # Install Node so we can run Nuxt inside this image
 RUN apk add --no-cache nodejs npm bash gettext
