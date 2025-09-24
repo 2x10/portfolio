@@ -1,5 +1,4 @@
 services:
-    # node app
     app:
         image: portfolio
         container_name: app
@@ -9,5 +8,5 @@ services:
         restart: always
         env_file: .env
         expose:
-            - "127.0.0.1:${PORT}:${PORT}"
+            - "${HOST}:${PORT}:${PORT}"
         entrypoint: node .output/server/index.mjs
