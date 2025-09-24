@@ -1,13 +1,16 @@
-# Install latest node version
 FROM node:lts-alpine
 
-# Install dependencies
 WORKDIR /app
+
+# install dependencies
 COPY package*.json ./
 RUN npm install
 
-# Compile build
+# copy source
+COPY . .
+
+# build
 RUN npm run build
 
-# Copy it to production
-COPY . . 
+# run
+CMD ["node", ".output/server/index.mjs"]
