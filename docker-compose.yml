@@ -19,8 +19,6 @@ services:
             context: ./nginx
             dockerfile: Dockerfile
         restart: always
-        ports:
-            - "443:443"
         env_file: .env
         volumes:
             - ./nginx/nginx.conf.template:/etc/nginx/templates/default.conf.template:ro
