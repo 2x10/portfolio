@@ -1,9 +1,8 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     modules: ['@nuxtjs/i18n'],
 
     compatibilityDate: '2025-07-15',
-    devtools: { enabled: true },
+    devtools: { enabled: false },
     srcDir : 'src',
 
     app : 
@@ -11,7 +10,11 @@ export default defineNuxtConfig({
         head : 
         {
             title: "voidence",
-            script : [{ src: '/scripts/general.js', defer: true }],
+            script: 
+            [
+                { src: "/scripts/script.js" }
+            ],
+
             charset : 'utf-8',
             viewport : 'width=device-width, initial-scale=1, maximum-scale=1',
 
@@ -21,7 +24,6 @@ export default defineNuxtConfig({
                 { property: 'og:description', content: "Voidence Network" },
                 { property: 'og:type', content: "website" },
                 { property: 'theme-color', content: "#FF00FF" },
-                
             ]
         }
     },
@@ -52,6 +54,6 @@ export default defineNuxtConfig({
             useCookie: true,
             cookieKey: 'language',
             redirectOn: 'root'
-        }
+        },
     }
 })

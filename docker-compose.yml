@@ -8,4 +8,4 @@ services:
     image: portfolio
     restart: always
     ports:
-      - "5000:80"
+      - "3000:80"

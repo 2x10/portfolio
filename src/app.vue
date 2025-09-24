@@ -2,20 +2,20 @@
     <div>
         <NuxtPage />
         <NuxtRouteAnnouncer />
-      
-        <div class="noise"></div>
-        <div class="snowflakes">
-            <div class="snowflake">☆</div> 
-            <div class="snowflake">⛤</div> 
-            <div class="snowflake">✧</div> 
-            <div class="snowflake">☆</div> 
-            <div class="snowflake">⛤</div> 
-            <div class="snowflake">✧</div> 
-            <div class="snowflake">☆</div> 
-            <div class="snowflake">✧</div> 
-            <div class="snowflake">☆</div> 
-            <div class="snowflake">✧</div> 
-            <div class="snowflake">☆</div> 
-        </div>
+    </div>
+
+    <div class="noise"></div>
+    <div class="snowflakes">
+        <div class="snowflake">☆</div> 
+        <div class="snowflake">⛤</div> 
+        <div class="snowflake">✧</div> 
+        <div class="snowflake">☆</div> 
+        <div class="snowflake">⛤</div> 
+        <div class="snowflake">✧</div> 
+        <div class="snowflake">☆</div> 
+        <div class="snowflake">✧</div> 
+        <div class="snowflake">☆</div> 
+        <div class="snowflake">✧</div> 
+        <div class="snowflake">☆</div> 
     </div>
 </template>

@@ -2,13 +2,11 @@
     import { computed } from 'vue'
     const { t, locale, setLocale } = useI18n()
 
-    // Proxy so v-model uses setLocale under the hood
     const selectedLocale = computed
     ({
         get: () => locale.value,
         set: (val) => setLocale(val)
     })
-    
 </script>
 
 <template>

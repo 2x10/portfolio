@@ -1,37 +1,23 @@
-# Author : Vongkeo KSV
-
-# Pull the base image 
+# ---- Build stage ----
 FROM node:lts-alpine AS build-stage
 
-# set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
 COPY package*.json ./
+RUN npm ci
 
-# Install dependencies
-RUN npm install
-
-# Copy all files
 COPY . .
+RUN npm run build
 
-# Build app
-RUN npm run build && npm run generate
+# ---- Production stage ----
+FROM node:lts-alpine AS production-stage
 
-# nginx state for serving content
-FROM nginx:latest AS production-stage
+WORKDIR /app
 
-# remove the default nginx.conf
-RUN rm -rf /usr/share/nginx/html/*
+# Copy only the build output
+COPY --from=build-stage /app/.output ./.output
 
-# Copy nginx configuration
-COPY ./nginx/default.conf /etc/nginx/conf.d
+EXPOSE 3000
 
-# Copy static files from build-stage
-COPY --from=build-stage /app/dist /usr/share/nginx/html
-
-# Expose port 80
-EXPOSE 80
-
-# start nginx in the foreground
-CMD ["nginx", "-g", "daemon off;"]
+# Start the Nuxt server
+CMD ["node", ".output/server/index.mjs"]
