@@ -25,7 +25,7 @@ FROM nginx:1.21.1-alpine as production-stage
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy nginx configuration
-COPY /nginx/default.conf /etc/nginx/conf.d
+COPY ./nginx/default.conf /etc/nginx/conf.d
 
 # Copy static files from build-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
