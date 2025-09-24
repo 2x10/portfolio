@@ -1,23 +1,30 @@
-# ---- Build stage ----
-FROM node:lts-alpine AS build-stage
+FROM node:lts-alpine AS build
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm ci
 
-COPY . .
+RUN npm install
+
 RUN npm run build
 
-# ---- Production stage ----
-FROM node:lts-alpine AS production-stage
+COPY . . 
+
+FROM nginx:alpine
 
 WORKDIR /app
 
-# Copy only the build output
-COPY --from=build-stage /app/.output ./.output
+# Copy Nuxt build output
+COPY --from=build /app/.output /app/.output
 
-EXPOSE 3000
+# Copy your nginx config (template with env vars if you want flexibility)
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
-# Start the Nuxt server
-CMD ["node", ".output/server/index.mjs"]
+# Install Node so we can run Nuxt inside this image
+RUN apk add --no-cache nodejs npm bash gettext
+
+# Expose HTTPS
+EXPOSE 443
+
+# Start both Nuxt + Nginx
+CMD sh -c "envsubst '\$SERVER_NAME \$SSL_CERT \$SSL_CERT_KEY' < /app/nginx/default.conf.template > /etc/nginx/conf.d/default.conf && node /app/.output/server/index.mjs & nginx -g 'daemon off;'"

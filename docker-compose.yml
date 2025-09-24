@@ -1,11 +1,16 @@
-version: '3.1'
+version: '3.8'
+
 services:
   portfolio:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
     container_name: portfolio
-    image: portfolio
     restart: always
     ports:
-      - "3000:80"
+      - "443:443"
+    env_file:
+      - .env
+    volumes:
+      - /etc/letsencrypt/live/mydomain.com/fullchain.pem:/etc/ssl/certs/fullchain.pem:ro
+      - /etc/letsencrypt/live/mydomain.com/privkey.pem:/etc/ssl/private/privkey.pem:ro
