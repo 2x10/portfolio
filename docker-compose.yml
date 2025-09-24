@@ -8,5 +8,5 @@ services:
         restart: always
         env_file: .env
         expose:
-            - "${HOST}:${PORT}:${PORT}"
+            - "127.0.0.1:3000:3000"
         entrypoint: node .output/server/index.mjs
