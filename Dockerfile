@@ -1,7 +1,7 @@
 # Author : Vongkeo KSV
 
 # Pull the base image 
-FROM node:lts-alpine as build-stage
+FROM node:lts-alpine AS build-stage
 
 # set working directory
 WORKDIR /app
@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build && npm run generate
 
 # nginx state for serving content
-FROM nginx:1.21.1-alpine as production-stage
+FROM nginx:latest AS production-stage
 
 # remove the default nginx.conf
 RUN rm -rf /usr/share/nginx/html/*
