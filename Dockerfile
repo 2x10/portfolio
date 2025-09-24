@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:lts
 
 WORKDIR /app
 
@@ -6,11 +6,11 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# copy source
-COPY . .
-
 # build
 RUN npm run build
+
+# copy to production
+COPY . .
 
 # run
 CMD ["node", ".output/server/index.mjs"]

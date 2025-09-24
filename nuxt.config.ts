@@ -5,6 +5,11 @@ export default defineNuxtConfig({
     devtools: { enabled: false },
     srcDir : 'src',
 
+    devServer : 
+    {
+        port : 3000
+    },
+    
     app : 
     {
         head : 

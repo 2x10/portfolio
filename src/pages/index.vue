@@ -78,6 +78,7 @@
                         <p>HTML5</p> 
                         <p>CSS3</p>
                         <p>JavaScript</p>
+                        <p>jQuery</p>
                     </div>
                     <div class="project-button-wrapper">
                         <a href="https://dinosaur.voidence.cc/" target="_blank" rel="noreferrer"> <button>{{t('project.button.demo')}} <img src="/image/open-new-tab.png"></button></a>
@@ -96,7 +97,6 @@
                         <p>HTML5</p> 
                         <p>CSS3</p>
                         <p>JavaScript</p>
-                        <p>jQuery</p>
                     </div>
                     <div class="project-button-wrapper">
                         <a href="https://borzoi.voidence.cc/" target="_blank" rel="noreferrer"> <button>{{t('project.button.demo')}} <img src="/image/open-new-tab.png"></button></a>
@@ -155,6 +155,7 @@
                         <p>JavaScript</p>
                         <p>TypeScript</p>
                         <p>NUXT4</p>
+                        <p>Docker</p>
                     </div>
                     <div class="project-button-wrapper">
                         <a href="https://dev.voidence.cc/" target="_blank" rel="noreferrer"> <button>{{t('project.button.demo')}} <img src="/image/open-new-tab.png"></button></a>
