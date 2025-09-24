@@ -1,6 +1,7 @@
 server 
 {
     server_name ${REVERSE_PROXY_HOST};
+    listen ${REVERSE_PROXY_PORT};
 
     location / 
     {

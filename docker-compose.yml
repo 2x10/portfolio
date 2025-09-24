@@ -8,20 +8,6 @@ services:
             dockerfile: Dockerfile
         restart: always
         env_file: .env
-        ports:
-            - "${PORT}"
+        expose:
+            - "127.0.0.1:${PORT}:${PORT}"
         entrypoint: node .output/server/index.mjs
-
-    nginx:
-        image: nginx-proxy:alpine
-        container_name: nginx-proxy
-        build:
-            context: ./nginx
-            dockerfile: Dockerfile
-        restart: always
-        env_file: .env
-        volumes:
-            - ./nginx/nginx.conf.template:/etc/nginx/templates/default.conf.template:ro
-        command: /bin/sh -c "envsubst < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
-        depends_on: 
-            - app
