@@ -1,0 +1,73 @@
+{
+    "header": 
+    {
+        "about": "Über mich",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+
+    "language" : 
+    {
+        "german" : "Deutsch",
+        "english" : "Englisch"
+    },
+
+    "about" : 
+    {
+        "description" : 
+        {
+            "p1" : "Wilkommen auf meinem Portfolio!",
+            "p2" : "Ich bin ein 20 Jähriger Hobby-Entwickler und arbeite in meiner Freizeit an persönlichen Projekten.",
+            "p3" : "Ich mache Web-Applikationen, Integrationen und Videospiele"
+        },
+
+        "github" : "Meine meist genutzten Programmiersprachen laut ",
+
+        "familiarities" : 
+        {
+            "header" : "Weitere Programmiersprachen und Programme:",
+            "description" : "Hier sind einige Programmiersprachen und Programme mit denen ich Erfahrung habe."
+        }
+    },
+
+    "project" : 
+    {
+        "header" : "Projekte",
+        "description" : "Meine persönlichen Projekte",
+
+        "button" : 
+        {
+            "demo" : "Live Demo",
+            "src" : "Quellcode",
+            "org": "Organisation"
+        },
+
+        "dinosaur" : 
+        {
+            "description" : "Das ist ein älteres Projekt vom Dinosaurier Spiel welches läuft wenn man im Chrome-Browser kein Internet hat. Ich habe dafür ein kleines Menü entworfen mit dem man das Spiel manipulieren kann. Mit der INSERT Taste öffnet sich die GUI."
+        },
+
+        "borzoi" : 
+        {
+            "description" : "Eine kleine Webseite die zufällige Bilder von Borzoi-Hunden anzeigt."
+        },
+        "honolulu" : 
+        {
+            "description" : "Dies ist eine Webseite die ich für eine alte Freundesgruppe erstellt habe."
+        },
+        "lucille" : 
+        {
+            "description" : "Ein Indie Spiel an dem ich zurzeit mit GameMaker Engine arbeite. Hierzu gibt es noch nicht viel Content den ich zeigen kann, wird aber noch kommen. Ein Release-Datum gibt is derzeit auch nicht."
+        },
+        "portfolio" : 
+        {
+            "description" : "Das Portfolio welches Sie gerade sehen! Es ist meine erste NUXT Applikation welches über Docker virtualisiert wird auf meiner VPS."
+        }
+    },
+
+    "contact" : 
+    {
+        "header" : "Kontakt",
+        "description" : "Kontaktieren Sie mich."
+    }
+}

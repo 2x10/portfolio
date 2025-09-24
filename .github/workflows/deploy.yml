@@ -21,4 +21,4 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H voidence.cc >> ~/.ssh/known_hosts
-        rsync -avz --delete ./ dev@voidence.cc:/var/www/portfolio.voidence.cc/
+        rsync -avz --delete ./ dev@voidence.cc:/web/portfolio/

@@ -1,0 +1,73 @@
+{
+    "header": 
+    {
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+
+    "language" : 
+    {
+        "german" : "German",
+        "english" : "English"
+    },
+
+    "about" : 
+    {
+        "description" : 
+        {
+            "p1" : "Welcome to my portfolio!",
+            "p2" : "I am a 20 year old developer working on personal projects.",
+            "p3" : "I make web applications, integrations and game development."
+        },
+
+        "github" : "My most used programming langues according to my ",
+
+        "familiarities" : 
+        {
+            "header" : "Other familiar languages and tools:",
+            "description" : "These are some programming languages and tools that i have experience with."
+        }
+    },
+
+    "project" : 
+    {
+        "header" : "Projects",
+        "description" : "My personal projects",
+
+        "button" : 
+        {
+            "demo" : "Live demo",
+            "src" : "View source",
+            "org": "View Organization"
+        },
+
+        "dinosaur" : 
+        {
+            "description" : "This is an old personal project of mine where i downloaded the source code of the game in chrome that runs whenever your internet cut out and added a little cheat GUI for it. Open it using the INSERT key."
+        },
+
+        "borzoi" : 
+        {
+            "description" : "A silly website with pictures of funny dogs."
+        },
+        "honolulu" : 
+        {
+            "description" : "This is a website that i made for an old friend group."
+        },
+        "lucille" : 
+        {
+            "description" : "An indie game i'm currently working on using GameMaker engine. There is no release date yet."
+        },
+        "portfolio" : 
+        {
+            "description" : "The portfolio you are viewing right now! This is my first NUXT application running in a Docker container on my VPS. It comes with multilingual support."
+        }
+    },
+
+    "contact" : 
+    {
+        "header" : "Contact",
+        "description" : "Contact me!"
+    }
+}
