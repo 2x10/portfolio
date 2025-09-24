@@ -22,10 +22,10 @@ export default defineNuxtConfig({
 
             meta : 
             [
-                { property: 'og:title', content: "Arthur's Portfolio" },
-                { property: 'og:description', content: "This is my personal portfolio" },
+                { property: 'og:title', content: "2x10's Portfolio" },
+                { property: 'og:description', content: "Voidence Network" },
                 { property: 'og:type', content: "website" },
-                { property: 'theme-color', content: "#0000FF" },
+                { property: 'theme-color', content: "#FF00FF" },
                 
             ]
         }
