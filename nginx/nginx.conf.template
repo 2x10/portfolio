@@ -1,0 +1,9 @@
+server 
+{
+    server_name ${REVERSE_PROXY_HOST};
+
+    location / 
+    {
+        proxy_pass http://app:${PORT};
+    }
+}
