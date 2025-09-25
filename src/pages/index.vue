@@ -32,12 +32,16 @@
     </div>
     <div class="main-div">
         <div class="main-div-content">
-            <h1>2x10's Portfolio <img class="id-photo" src="/image/2x10.png"></h1>
+            <h1 class="header">
+                2x10's Portfolio
+                <img class="id-photo" src="/image/2x10.png">
+
+            </h1> 
             <p> {{t('about.description.p1')}} </p>
             <p> {{t('about.description.p2')}} </p>
             <p> {{t('about.description.p3')}} </p>
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=2x10&theme=dark&layout=compact&langs_count=10&title_color=ffffff&bg-color=111111&custom_title=Most%20used%20languages">
-            <p class="description">{{t('about.github')}} <a href="https://github.com/2x10" target="_blank" rel="noreferrer">GitHub</a>.</p>
+            <img   :src="`https://github-readme-stats.vercel.app/api/top-langs/?username=2x10&theme=dark&layout=compact&langs_count=10&title_color=ffffff&bg-color=111111&custom_title=${t('about.github.header')}`">
+            <p class="description">{{t('about.github.description')}} <a href="https://github.com/2x10" target="_blank" rel="noreferrer">GitHub</a>.</p>
             <h2>{{t('about.familiarities.header')}}</h2>
             <p class="description">{{t('about.familiarities.description')}}</p>
             <div class="lang-list"> 

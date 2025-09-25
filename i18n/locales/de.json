@@ -21,7 +21,11 @@
             "p3" : "Ich mache Web-Applikationen, Integrationen und Videospiele"
         },
 
-        "github" : "Meine meist genutzten Programmiersprachen laut ",
+        "github" : 
+        {
+            "description": "Meine meist genutzten Programmiersprachen laut ",
+            "header": "Programmiersprachen"
+        },
 
         "familiarities" : 
         {

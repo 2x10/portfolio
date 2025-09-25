@@ -1,0 +1,45 @@
+@media (min-width: 455px) 
+{
+    .id-photo 
+    {
+       width: 8rem;
+       opacity: 1;
+    }
+}
+
+@media (min-width: 600px) 
+{
+    .id-photo
+    {
+        width: 15rem;
+        opacity: 1
+    }
+}
+
+@media (min-width: 1500px) {
+    .main-div 
+    {
+        width: 75%;
+        border: 1px solid white;
+        border-bottom: none;
+    }
+
+    .top-div-main 
+    {
+        border: 1px #FFF solid;
+        border-top: none;
+        width:75%;
+        margin: 0 auto;
+    }
+
+    .project-div 
+    {
+        height: 270px;
+    }
+
+    .id-photo
+    {
+        width: 21rem;
+        opacity: 1
+    }
+}

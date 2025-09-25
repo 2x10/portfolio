@@ -22,3 +22,9 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H voidence.cc >> ~/.ssh/known_hosts
         rsync -avz --delete ./ dev@voidence.cc:/home/dev/web/portfolio/
+
+    - name: Run install script
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+      run: |
+        ssh -i ~/.ssh/id_rsa dev@voidence.cc "cd /home/dev/web/portfolio && ./install.sh"

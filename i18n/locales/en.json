@@ -21,7 +21,11 @@
             "p3" : "I make web applications, integrations and game development."
         },
 
-        "github" : "My most used programming langues according to my ",
+        "github" : 
+        {
+            "description": "These are my most used languages according to my ",
+            "header": "Most%20used%20languages"
+        },
 
         "familiarities" : 
         {

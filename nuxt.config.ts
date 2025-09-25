@@ -38,6 +38,7 @@ export default defineNuxtConfig({
         '~/assets/css/style.css',
         '~/assets/css/background.css',
         '~/assets/css/global.css',
+        '~/assets/css/mobile.css',
     ],
 
     i18n: 
