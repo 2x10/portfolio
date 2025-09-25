@@ -32,11 +32,8 @@
     </div>
     <div class="main-div">
         <div class="main-div-content">
-            <h1 class="header">
-                2x10's Portfolio
-                <img class="id-photo" src="/image/2x10.png">
-
-            </h1> 
+            <img class="id-photo" src="/image/2x10.png" alt="Profile photo">
+            <h1>2x10's Portfolio</h1> 
             <p> {{t('about.description.p1')}} </p>
             <p> {{t('about.description.p2')}} </p>
             <p> {{t('about.description.p3')}} </p>

@@ -1,4 +1,4 @@
-name: Deploy to VPS
+name: Deploy App
 
 on:
   push:
@@ -27,4 +27,4 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
       run: |
-        ssh -i ~/.ssh/id_rsa dev@voidence.cc "cd /home/dev/web/portfolio && ./install.sh"
+        ssh -i ~/.ssh/id_rsa dev@voidence.cc "cd /home/dev/web/portfolio && bash ./install.sh"

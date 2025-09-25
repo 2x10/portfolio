@@ -123,13 +123,15 @@
     text-align:center;
 }
 
-.header {
+.header-wrapper
+{
     display: grid;
-    grid-template-columns: 0 auto;
-    align-items: start;  
+    grid-template-columns: 1fr auto; /* text takes left, image takes right */
     gap: 1rem;
     margin: 0;
-    
+}
+
+h1 {
     font-size: 53px;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: rgba(0, 0, 0, 0.863);
