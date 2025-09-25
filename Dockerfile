@@ -1,4 +1,4 @@
-FROM node:lts-alpine 
+FROM node:lts-alpine
 
 WORKDIR /app
 
@@ -10,6 +10,8 @@ COPY . .
 
 # build
 RUN npm run build
+
+COPY . .
 
 # run
 CMD ["node", ".output/server/index.mjs"]

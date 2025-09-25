@@ -1,6 +1,6 @@
 services:
     app:
-        image: portfolio
+        image: 2x10/portfolio
         container_name: app
         build: 
             context: .
