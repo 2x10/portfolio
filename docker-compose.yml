@@ -6,6 +6,6 @@ services:
             context: .
             dockerfile: Dockerfile
         env_file: .env
-        restart: always
+        restart: unless-stopped  
         ports:
             - "127.0.0.1:${PORT}:${PORT}"
