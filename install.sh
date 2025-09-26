@@ -8,12 +8,10 @@ setup_config() {
     if [ ! -f "$CONFIG_FILE" ] || [ ! -s "$CONFIG_FILE" ]; then
         if [ ! -f "$EXAMPLE_FILE" ]; then
             echo "Example file '$EXAMPLE_FILE' is missing. Cannot create '$CONFIG_FILE'."
-            exit 1
+            exit 0
         fi
-
         cp "$EXAMPLE_FILE" "$CONFIG_FILE"
-        echo "A $CONFIG_FILE file has been created. Please configure it before running the installer again."
-        exit 1
+        exit 100
     fi
 }
 

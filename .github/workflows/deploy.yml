@@ -21,10 +21,10 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H voidence.cc >> ~/.ssh/known_hosts
-        rsync -avz --delete ./ dev@voidence.cc:/home/dev/web/portfolio/
+        rsync -avz --delete --exclude='.env' ./ dev@voidence.cc:/home/dev/web/portfolio/
 
     - name: Run install script
       env:
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
       run: |
-        ssh -i ~/.ssh/id_rsa dev@voidence.cc "cd /home/dev/web/portfolio && bash ./install.sh"
+        ssh -i ~/.ssh/id_rsa dev@voidence.cc "cd /home/dev/web/portfolio && bash ./install.sh || exit_code=\$?; if [ \$exit_code -eq 100 ]; then echo 'First-time setup done, skipping failure'; exit 0; else exit \$exit_code; fi"
