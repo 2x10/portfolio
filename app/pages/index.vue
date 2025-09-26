@@ -1,5 +1,7 @@
-<script setup lang="ts">
-const { t } = useI18n()
+<script setup>
+const { getArray, t } = useI18nHelper()
+
+const description = getArray('about.description')
 
 const projects = 
 [
@@ -81,9 +83,9 @@ const languageList =
     <Content>
         <img class="id-photo" src="/image/2x10.png" alt="Profile photo">
         <h1>2x10's Portfolio</h1> 
-        <p> {{t('about.description.p1')}} </p>
-        <p> {{t('about.description.p2')}} </p>
-        <p> {{t('about.description.p3')}} </p>
+        <p v-for="(text) in description">
+            {{ text }}
+        </p>
         <img :src="`https://github-readme-stats.vercel.app/api/top-langs/?username=2x10&theme=dark&layout=compact&langs_count=10&title_color=ffffff&bg-color=111111&custom_title=${t('about.github.header')}`">
         <p class="description">{{t('about.github.description')}} <a href="https://github.com/2x10" target="_blank" rel="noreferrer">GitHub</a>.</p>
         <h2>{{t('about.familiarities.header')}}</h2>
@@ -96,10 +98,8 @@ const languageList =
         
         <section id="Projects"></section>
 
-        <center>
-        <h2>{{t('header.projects')}}</h2>
-        <p class="description">{{t('project.description')}}</p>
-        </center>
+        <h2 class="center">{{t('header.projects')}}</h2>
+        <p class="description center">{{t('project.description')}}</p>
         <ProjectCard
             v-for="project in projects"
             :key="project.title"

@@ -15,11 +15,11 @@
     "about" : 
     {
         "description" : 
-        {
-            "p1" : "Welcome to my portfolio!",
-            "p2" : "I am a 20 year old developer working on personal projects.",
-            "p3" : "I make web applications, integrations and game development."
-        },
+        [
+            "Welcome to my portfolio!",
+            "I am a 20 year old developer working on personal projects.",
+            "I make web applications, integrations and game development."
+        ],
 
         "github" : 
         {

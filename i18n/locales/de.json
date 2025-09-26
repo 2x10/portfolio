@@ -15,11 +15,11 @@
     "about" : 
     {
         "description" : 
-        {
-            "p1" : "Wilkommen auf meinem Portfolio!",
-            "p2" : "Ich bin ein 20 Jähriger Hobby-Entwickler und arbeite in meiner Freizeit an persönlichen Projekten.",
-            "p3" : "Ich mache Web-Applikationen, Integrationen und Videospiele"
-        },
+        [
+            "Wilkommen auf meinem Portfolio!",
+            "Ich bin ein 20 Jähriger Hobby-Entwickler und arbeite in meiner Freizeit an persönlichen Projekten.",
+            "Ich mache Web-Applikationen, Integrationen und Videospiele"
+        ],
 
         "github" : 
         {

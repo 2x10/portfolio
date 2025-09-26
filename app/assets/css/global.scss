@@ -13,7 +13,6 @@ body {
   scroll-behavior: smooth;
 }
 
-
 h1 {
     font-size: 53px;
     -webkit-text-stroke-width: 3px;
@@ -54,10 +53,6 @@ p {
   font-size: 18x;
 }
 
-br {
-  margin: 10px;
-}
-
 button 
 {
   transition: background-color 0.3s ease, color 0.3s ease; 
@@ -75,6 +70,12 @@ body {
 .grow:hover 
 {
    transform: scale(1.2);
+}
+
+.center 
+{
+    display: grid;
+    justify-content: center;
 }
 
 .description 

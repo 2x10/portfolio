@@ -1,11 +1,5 @@
 <script setup lang="ts">
-    const { t, locale, setLocale } = useI18n()
-    import { computed } from 'vue'
-    const selectedLocale = computed
-    ({
-        get: () => locale.value,
-        set: (val) => setLocale(val)
-    })
+    const { selectedLocale, t } = useI18nHelper()
 
     defineProps<{
         items: 

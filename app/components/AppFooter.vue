@@ -1,30 +1,24 @@
 <script setup>
-    const { t } = useI18n()
+    const { t } = useI18nHelper()
 </script>
 
 <template>
-    <h2 class="center">{{t('header.contact')}}</h2>
-    <p class="description center">{{t('contact.description')}}</p>
     <div class="center">
+        <h2 >{{t('header.contact')}}</h2>
+        <p class="description">{{t('contact.description')}}</p>
+    </div>
+
+    <div class="contact">
         <a href="mailto://contact@voidence.cc"><button><h3>contact@voidence.cc</h3></button></a>
         <div class="line"></div>
-    </div>
-    <div class="contact">
         <a href="https://github.com/2x10"><button><img src="/image/github.png"></button></a>
     </div>
 </template>
 
 <style>
 
-.center 
-{
-    display: grid;
-    justify-content: center;
-}
-
 .contact 
 {
-    text-align: center;
     position:relative;
     display: flex;
     justify-content: center; 
