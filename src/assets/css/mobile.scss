@@ -1,4 +1,6 @@
-@media (min-width: 455px) 
+@use "breakpoints" as *;
+
+@media (min-width: $bp-small) 
 {
     .id-photo
     {
@@ -7,7 +9,7 @@
     }
 }
 
-@media (min-width: 600px) 
+@media (min-width: $bp-medium) 
 {
     .id-photo
     {
@@ -16,25 +18,12 @@
     }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: $bp-large) {
     .main-div 
     {
         width: 75%;
         border: 1px solid white;
         border-bottom: none;
-    }
-
-    .top-div-main 
-    {
-        border: 1px #FFF solid;
-        border-top: none;
-        width:75%;
-        margin: 0 auto;
-    }
-
-    .project-div 
-    {
-        height: 270px;
     }
 
     .id-photo

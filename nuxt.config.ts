@@ -35,10 +35,20 @@ export default defineNuxtConfig({
 
     css : 
     [
-        '~/assets/css/style.css',
-        '~/assets/css/background.css',
-        '~/assets/css/global.css',
-        '~/assets/css/mobile.css',
+        '~/assets/css/style.scss',
+        '~/assets/css/background.scss',
+        '~/assets/css/global.scss',
+        '~/assets/css/breakpoints.scss',
+        '~/assets/css/mobile.scss',
+    ],
+
+    components: [
+        {
+          path: '~/components',
+          pathPrefix: false,    
+          global: true,
+          
+        },
     ],
 
     i18n: 
