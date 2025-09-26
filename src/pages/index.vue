@@ -48,9 +48,9 @@ const projects =
 
 const navItems = 
 [
-    { label: "About", href: t('#About') },
-    { label: "Projects", href: "#Projects" },
-    { label: "Contact", href: "#Contact" },
+    { label: t('header.about'), href: '#About' },
+    { label: t('header.projects'), href: "#Projects" },
+    { label: t('header.contact'), href: "#Contact" },
 ]
 
 const languageList = 
