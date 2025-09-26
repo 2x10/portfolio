@@ -42,7 +42,7 @@ const projects =
         title: "Portfolio",
         description: t('project.portfolio.description'),
         languages: ["vue", "nuxt", "sass", "TypeScript", "Docker"],
-        demoLink: "dev.voidence.cc",
+        demoLink: "https://dev.voidence.cc",
         srcLink: "https://github.com/2x10/portfolio"
     },   
 ]
