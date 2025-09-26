@@ -5,7 +5,7 @@
         languages: string[]
         demoLink: string
         srcLink: string
-        image: string
+        image?: string
         orgView?: boolean
     }>()
 </script>
@@ -14,7 +14,12 @@
     <div class="project-div">
 
         <div class="project-image-wrapper">
-            <img :src="image"> 
+            <img v-if="image" :src="image"> 
+            <template v-else>
+                <div>
+                    <p>:)</p>
+                </div>
+            </template>
         </div>
 
         <div class="project-content">
@@ -54,7 +59,7 @@
 </template>
 
 <style lang="scss" scoped>
-@use "~/assets/css/breakpoints.scss" as *;
+@use "~/assets/css/variables.scss" as *;
 
 .project-content
 {
@@ -172,6 +177,21 @@
 {
     height: 12px;
     width: 12px;
+}
+
+.project-image-wrapper div
+{
+    height:100%;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    font-size:20px;
+    color:white;
+}
+
+.project-image-wrapper p
+{
+    opacity: 0.1
 }
 
 @media (min-width: $bp-large) {

@@ -3,12 +3,7 @@ export default defineNuxtConfig({
 
     compatibilityDate: '2025-07-15',
     devtools: { enabled: false },
-    srcDir : 'src',
-
-    devServer : 
-    {
-        port : 3000
-    },
+    srcDir : 'app',
     
     app : 
     {
@@ -35,11 +30,8 @@ export default defineNuxtConfig({
 
     css : 
     [
-        '~/assets/css/style.scss',
-        '~/assets/css/background.scss',
         '~/assets/css/global.scss',
-        '~/assets/css/breakpoints.scss',
-        '~/assets/css/mobile.scss',
+        '~/assets/css/variables.scss'
     ],
 
     components: [

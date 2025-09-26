@@ -41,8 +41,7 @@ const projects =
         description: t('project.portfolio.description'),
         languages: ["vue", "nuxt", "sass", "TypeScript", "Docker"],
         demoLink: "dev.voidence.cc",
-        srcLink: "https://github.com/2x10/portfolio",
-        image: "",
+        srcLink: "https://github.com/2x10/portfolio"
     },   
 ]
 
@@ -79,41 +78,82 @@ const languageList =
     <section id="About"></section>
     <TopNav :items="navItems"/>
 
-    <div class="main-div">
-        <div class="main-div-content">
-            <img class="id-photo" src="/image/2x10.png" alt="Profile photo">
-            <h1>2x10's Portfolio</h1> 
-            <p> {{t('about.description.p1')}} </p>
-            <p> {{t('about.description.p2')}} </p>
-            <p> {{t('about.description.p3')}} </p>
-            <img :src="`https://github-readme-stats.vercel.app/api/top-langs/?username=2x10&theme=dark&layout=compact&langs_count=10&title_color=ffffff&bg-color=111111&custom_title=${t('about.github.header')}`">
-            <p class="description">{{t('about.github.description')}} <a href="https://github.com/2x10" target="_blank" rel="noreferrer">GitHub</a>.</p>
-            <h2>{{t('about.familiarities.header')}}</h2>
-            <p class="description">{{t('about.familiarities.description')}}</p>
+    <Content>
+        <img class="id-photo" src="/image/2x10.png" alt="Profile photo">
+        <h1>2x10's Portfolio</h1> 
+        <p> {{t('about.description.p1')}} </p>
+        <p> {{t('about.description.p2')}} </p>
+        <p> {{t('about.description.p3')}} </p>
+        <img :src="`https://github-readme-stats.vercel.app/api/top-langs/?username=2x10&theme=dark&layout=compact&langs_count=10&title_color=ffffff&bg-color=111111&custom_title=${t('about.github.header')}`">
+        <p class="description">{{t('about.github.description')}} <a href="https://github.com/2x10" target="_blank" rel="noreferrer">GitHub</a>.</p>
+        <h2>{{t('about.familiarities.header')}}</h2>
+        <p class="description">{{t('about.familiarities.description')}}</p>
+        <LanguageList :items="languageList"/>
+        <div class="big-line">
+            <div></div>
+            <div></div>
+        </div>
+        
+        <section id="Projects"></section>
 
-            <LanguageList :items="languageList"/>
+        <center>
+        <h2>{{t('header.projects')}}</h2>
+        <p class="description">{{t('project.description')}}</p>
+        </center>
+        <ProjectCard
+            v-for="project in projects"
+            :key="project.title"
+            v-bind="project"
+        />
 
-            <div class="big-line">
-                <div></div>
-                <div></div>
-            </div>
-            <section id="Projects"></section>
-            <h2 class="center">{{t('header.projects')}}</h2>
-            <p class="description center">{{t('project.description')}}</p>
-
-            <ProjectCard
-                v-for="project in projects"
-                :key="project.title"
-                v-bind="project"
-            />
-
-            <div class="big-line">
-                <div></div>
-                <div></div>
-            </div>
+        <div class="big-line">
+            <div></div>
+            <div></div>
         </div>
 
-        <AppFooter />
-        <section id="Contact"></section>
-    </div>
+    </Content>
+    <section id="Contact"></section>
 </template>
+
+<style lang="scss" scooped>
+@use "~/assets/css/variables.scss" as *;
+.id-photo
+{
+    top: 0;
+    opacity: 0;
+    width: 0;
+    height: auto;
+    float: right;
+
+    border: 1px solid white;
+    border-radius: 9999px;
+}
+
+@media (min-width: $bp-small) 
+{
+    .id-photo
+    {
+       width: 8rem;
+       opacity: 1;
+    }
+}
+
+@media (min-width: $bp-medium) 
+{
+    .id-photo
+    {
+        width: 15rem;
+        opacity: 1
+    }
+}
+
+@media (min-width: $bp-large) 
+{
+    .id-photo
+    {
+        width: 21rem;
+        opacity: 1
+    }
+}
+
+</style>

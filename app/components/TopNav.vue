@@ -39,7 +39,7 @@
 </template>
 
 <style lang="scss" scoped>
-@use "~/assets/css/breakpoints.scss" as *;
+@use "~/assets/css/variables.scss" as *;
 
 .top-div 
 {
