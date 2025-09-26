@@ -11,7 +11,14 @@ setup_config() {
             exit 0
         fi
         cp "$EXAMPLE_FILE" "$CONFIG_FILE"
-        exit 100
+        echo "::warning file=$CONFIG_FILE::A $CONFIG_FILE file has been created and needs to be configured before running the installer again."
+
+        echo "============================================================="
+        echo "⚠️  A $CONFIG_FILE file has been created."
+        echo "Please configure it before running the installer again!"
+        echo "============================================================="
+
+        exit 100 
     fi
 }
 

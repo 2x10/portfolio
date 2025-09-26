@@ -28,3 +28,4 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
       run: |
         ssh -i ~/.ssh/id_rsa dev@voidence.cc "cd /home/dev/web/portfolio && bash ./install.sh || exit_code=\$?; if [ \$exit_code -eq 100 ]; then echo 'First-time setup done, skipping failure'; exit 0; else exit \$exit_code; fi"
+
