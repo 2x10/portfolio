@@ -27,5 +27,19 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
       run: |
-        ssh -i ~/.ssh/id_rsa dev@voidence.cc "cd /home/dev/web/portfolio && bash ./install.sh || exit_code=\$?; if [ \$exit_code -eq 100 ]; then echo 'First-time setup done, skipping failure'; exit 0; else exit \$exit_code; fi"
+        ssh -i ~/.ssh/id_rsa dev@voidence.cc << 'EOF'
+          set -e 
 
+          cd /home/dev/web/portfolio
+
+          # Run the installer
+          bash ./install.sh || exit_code=$?
+          exit_code=${exit_code:-0}
+
+          if [ "$exit_code" -eq 100 ]; then
+              echo "First-time setup done, skipping failure."
+              exit 0
+          else
+              exit $exit_code
+          fi
+        EOF
