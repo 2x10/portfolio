@@ -7,8 +7,9 @@ EXAMPLE_FILE="${CONFIG_FILE}.example"
 setup_config() {
     if [ ! -f "$CONFIG_FILE" ] || [ ! -s "$CONFIG_FILE" ]; then
         if [ ! -f "$EXAMPLE_FILE" ]; then
+            echo "::Example file '$EXAMPLE_FILE' is missing. Cannot create '$CONFIG_FILE'."
             echo "Example file '$EXAMPLE_FILE' is missing. Cannot create '$CONFIG_FILE'."
-            exit 0
+            exit 100
         fi
         cp "$EXAMPLE_FILE" "$CONFIG_FILE"
         echo "::warning file=$CONFIG_FILE::A $CONFIG_FILE file has been created and needs to be configured before running the installer again."
