@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     {
         head : 
         {
-            title: "voidence",
+            title: "2x10's Portfolio",
             script: 
             [
                 { src: "/scripts/script.js" }
