@@ -21,7 +21,7 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H voidence.cc >> ~/.ssh/known_hosts
-        rsync -avz --delete --exclude='.env' ./ dev@voidence.cc:/home/dev/web/portfolio/
+        rsync -avz --delete --exclude='.env' ./ dev@voidence.cc:/var/www/dev.voidence.cc/
 
     - name: Run install script
       env:
@@ -30,7 +30,7 @@ jobs:
         ssh -i ~/.ssh/id_rsa dev@voidence.cc << 'EOF'
           set -e 
 
-          cd /home/dev/web/portfolio
+          cd /var/www/dev.voidence.cc/
 
           # Run the installer
           bash ./install.sh
