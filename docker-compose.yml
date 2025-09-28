@@ -1,7 +1,7 @@
 services:
     app:
         image: 2x10/portfolio
-        container_name: app
+        container_name: 2x10.portfolio
         build: 
             context: .
             dockerfile: Dockerfile
