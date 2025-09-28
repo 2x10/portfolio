@@ -1,8 +1,37 @@
-# Nuxt Minimal Starter
+# 2x10's Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+### [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction)
 
-## Setup
+### [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment)
+
+## Deployment
+Run the installer to build the Docker enviroment:
+```bash
+bash installer.sh
+```
+Then configurate the .env file that has been created and configurate it to your needs.
+After configurating the enviroment, just re-run the installer and it will be good to go.  
+#
+Though, in the root of the project, you can also just copy the ``.env.example`` to ``.env``, configurate it and then run ``docker compose up -d`` 
+### Reverse Proxy
+If you wanna run this behind a reverse proxy server such as nginx, consider something like this for your ``nginx.conf``
+```nginx
+server 
+{
+    listen 443 ssl http2;
+    server_name your.cool-domain.tld;
+
+    ssl_certificate     /etc/your/key/key.pub;
+    ssl_certificate_key /etc/your/key/key;
+
+    location / 
+    {
+        proxy_pass http://127.0.0.1:3000;
+    }
+}
+```
+
+## If you want to contribute to the project
 
 Make sure to install dependencies:
 
@@ -20,7 +49,7 @@ yarn install
 bun install
 ```
 
-## Development Server
+### Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -38,7 +67,7 @@ yarn dev
 bun run dev
 ```
 
-## Production
+### Production
 
 Build the application for production:
 
@@ -71,5 +100,3 @@ yarn preview
 # bun
 bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
