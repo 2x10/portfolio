@@ -58,8 +58,6 @@
 {
     z-index: 100;
     position:relative;
-    margin-left:3px;
-    margin-right:3px;
     
     height: 100%;
     width: 200px;
@@ -95,19 +93,21 @@
 {
     height: 100%;
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .nav-center 
 {
     height: 100%;
     position: absolute;
+    gap: 5px;
 }
 
 .nav-right 
 {
     height: 100%;
     display: flex;
+    gap: 5px;
 }
 
 .top-div button:hover

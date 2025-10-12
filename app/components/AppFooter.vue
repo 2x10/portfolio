@@ -15,7 +15,7 @@
     </div>
 </template>
 
-<style>
+<style lang="scss">
 
 .contact 
 {
@@ -33,6 +33,7 @@
     border: 0px;
     height:70px;
     background-color: #00000000;
+    font-family: 'Century Gothic Bold'; 
 }
 
 .contact button:hover
