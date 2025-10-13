@@ -10,10 +10,6 @@ export default defineNuxtConfig({
         head : 
         {
             title: "2x10's Portfolio",
-            script: 
-            [
-                { src: "/scripts/script.js" }
-            ],
 
             charset : 'utf-8',
             viewport : 'width=device-width, initial-scale=1, maximum-scale=1',

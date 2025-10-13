@@ -1,6 +1,9 @@
 <script setup lang="ts">
     const { selectedLocale, t } = useI18nHelper()
 
+    import { useClock } from '~/composables/useClock'
+    const time = useClock()
+
     defineProps<{
         items: 
         {
@@ -26,7 +29,7 @@
             </div>
 
             <div class="nav-right"> 
-                <button id="clockTime"></button>   
+                <button> {{ time }} </button>   
             </div>         
         </div>
     </div>
