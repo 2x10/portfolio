@@ -10,9 +10,9 @@ export function useClock()
         var hours = now.getHours();
 
         time.value = 
-        ("0" + hours).substr(-2) + ":" + 
-        ("0" + minutes).substr(-2) + ":" + 
-        ("0" + seconds).substr(-2)
+            ("0" + hours).substr(-2) + ":" + 
+            ("0" + minutes).substr(-2) + ":" + 
+            ("0" + seconds).substr(-2)
     }
 
     let intervalId: number | undefined

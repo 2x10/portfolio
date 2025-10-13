@@ -82,7 +82,7 @@ const languageList =
 
     <Content>
         <img class="id-photo" src="/image/2x10.png" alt="Profile photo">
-        <h1>Arthur's Portfolio</h1> 
+        <h1>2x10's Portfolio</h1> 
         <p v-for="(text) in description">
             {{ text }}
         </p>
