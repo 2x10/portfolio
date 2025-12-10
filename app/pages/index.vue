@@ -86,7 +86,9 @@ const languageList =
         <p v-for="(text) in description">
             {{ text }}
         </p>
-        <img :src="`https://github-readme-stats.vercel.app/api/top-langs/?username=2x10&theme=dark&layout=compact&langs_count=10&title_color=ffffff&bg-color=111111&custom_title=${t('about.github.header')}`">
+        <!--
+            <img :src="`https://github-readme-stats.vercel.app/api/top-langs/?username=2x10&theme=dark&layout=compact&langs_count=10&title_color=ffffff&bg-color=111111&custom_title=${t('about.github.header')}`">
+        -->
         <p class="description">{{t('about.github.description')}} <a href="https://github.com/2x10" target="_blank" rel="noreferrer">GitHub</a>.</p>
         <h2>{{t('about.familiarities.header')}}</h2>
         <p class="description">{{t('about.familiarities.description')}}</p>
