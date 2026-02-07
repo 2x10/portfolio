@@ -2,7 +2,7 @@
 
 ### [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction)
 
-### [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment)
+### [Nuxt deployment documentation](https://nuxt.com/docs/getting-started/deployment) 
 
 ## Deployment
 Run the installer to build the Docker enviroment:
