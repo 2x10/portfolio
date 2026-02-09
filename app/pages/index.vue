@@ -96,7 +96,7 @@ const languageList =
         <div class="big-line">
             <div></div>
             <div></div>
-        </div>
+        </div> 
         
         <section id="Projects"></section>
 
