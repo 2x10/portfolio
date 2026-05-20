@@ -44,7 +44,7 @@ const projects =
         languages: ["vue", "nuxt", "sass", "TypeScript", "Docker"],
         demoLink: "https://dev.voidence.cc",
         srcLink: "https://github.com/2x10/portfolio"
-    },   
+    }
 ]
 
 const navItems = 
