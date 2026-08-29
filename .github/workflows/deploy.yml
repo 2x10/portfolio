@@ -20,14 +20,14 @@ jobs:
         mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H voidence.cc >> ~/.ssh/known_hosts
-        rsync -avz --delete --exclude='.env' ./ dev@voidence.cc:/var/www/dev.voidence.cc/
+        ssh-keyscan -H void.tail78ffe5.ts.netcc >> ~/.ssh/known_hosts
+        rsync -avz --delete --exclude='.env' ./ dev@void.tail78ffe5.ts.net:/var/www/dev.voidence.cc/
 
     - name: Run install script
       env:
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
       run: |
-        ssh -i ~/.ssh/id_rsa dev@voidence.cc << 'EOF'
+        ssh -i ~/.ssh/id_rsa dev@void.tail78ffe5.ts.net << 'EOF'
           set -e 
 
           cd /var/www/dev.voidence.cc/
