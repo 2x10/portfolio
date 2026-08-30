@@ -29,3 +29,4 @@ echo "$CONFIG_FILE found and configured, proceeding with installation..."
 
 docker compose build --no-cache
 docker compose up -d --force-recreate
+docker image prune -f
