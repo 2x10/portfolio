@@ -1,4 +1,4 @@
-# Arthurs's Portfolio
+# 2x10's Portfolio
 
 ### [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction)
 
